@@ -1,1 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SecureNet - Cyber Security</title>
 
+    <style>
+/* --- INTRO PAGE --- */
+.intro {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #004d44, #00a99d);
+    color: white;
+}
+
+.intro h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 1.3rem;
+    margin: 5px 0;
+}
+
+.intro .tech {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+        /* --- RESET --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            background-color: #00a99d;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #00877a;
+            transform: translateY(-2px);
+        }
+
+        /* --- HEADER --- */
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 60px;
+            background-color: #eaf6f3;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        }
+
+        .header .logo {
+            width: 170px;
+            border-radius: 8px;
+        }
+
+        .header nav a {
+            margin-left: 30px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: #00756a;
+            transition: color 0.3s;
+        }
+
+        .header nav a:hover {
+            color: #004d44;
+        }
+
+        /* --- HERO --- */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 90px 60px;
+            background: linear-gradient(135deg, #d9f0ed, #eefaf8);
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-text h1 {
+            font-size: 2.8rem;
+            color: #004d44;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #444;
+        }
+
+        .hero img {
+            width: 480px;
+            border-radius: 12px;
+        }
+
+        /* --- HIGHLIGHTS --- */
+        .highlights {
+            background-color: #ffffff;
+            padding: 60px 50px;
+            text-align: center;
+        }
+
+        .highlights h2 {
+            color: #004d44;
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+
+        .highlight-grid {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+        }
+
+        .highlight {
+            background: #f7fbfa;
+            padding: 25px;
+            border-radius: 12px;
+            max-width: 250px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .highlight h3 {
+            margin-bottom: 10px;
+            color: #00756a;
+        }
+
+        /* --- FEATURES --- */
+        .feature {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 70px 60px;
+            background-color: #ffffff;
+            gap: 40px;
+        }
+
+        .feature.reverse {
+            flex-direction: row-reverse;
+            background-color: #f1fbf9;
+        }
+
+        .feature img {
+            width: 420px;
+            border-radius: 12px;
+        }
+
+        .feature h2 {
+            color: #00756a;
+            margin-bottom: 15px;
+        }
+
+        /* --- ADVANTAGES --- */
+        .advantages {
+            display: flex;
+            justify-content: space-around;
+            padding: 70px 60px;
+            background-color: #eaf6f3;
+        }
+
+        .card {
+            text-align: center;
+            max-width: 260px;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            margin: 15px 0 10px;
+            color: #004d44;
+        }
+
+        /* --- MAP --- */
+        .map {
+            text-align: center;
+            padding: 70px 60px;
+            background-color: #d9f0ed;
+        }
+
+        .map img {
+            margin-top: 30px;
+            width: 85%;
+            max-width: 900px;
+            border-radius: 12px;
+        }
+
+        .map h2 {
+            color: #004d44;
+            margin-bottom: 15px;
+        }
+
+        .map p {
+            margin-top: 15px;
+            font-weight: 600;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #00756a;
+            color: white;
+            font-weight: 500;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media(max-width: 900px) {
+            .hero, .feature, .feature.reverse, .highlight-grid, .advantages {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero img, .feature img {
+                width: 80%;
+                margin-top: 30px;
+            }
+
+            .header {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<!-- INTRO / FIRST PAGE WITH NAME -->
+<section class="intro">
+    <h1>Noorjahan</h1>
+    <p>SecureNet – Cyber Security Website</p>
+    <p class="tech">HTML & CSS Project</p>
+</section>
+
+
+<header class="header">
+    <img src="cyber_logo.jpg" class="logo" alt="SecureNet Logo">
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Security</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Advanced Cyber Security for Your Digital Life</h1>
+        <p>
+            SecureNet protects your personal data, privacy,  
+            and digital identity with enterprise-grade security.
+        </p>
+        <button>Start Free Protection</button>
+    </div>
+    <img src="hero2.jpg" alt="Cyber Security Illustration">
+</section>
+
+<section class="highlights">
+    <h2>Why Choose SecureNet?</h2>
+    <div class="highlight-grid">
+        <div class="highlight">
+            <h3>🔐 Data Encryption</h3>
+            <p>Military-grade encryption keeps your data safe.</p>
+        </div>
+        <div class="highlight">
+            <h3>🛡 Threat Detection</h3>
+            <p>Blocks malware, phishing, and cyber attacks.</p>
+        </div>
+        <div class="highlight">
+            <h3>🌐 Secure Browsing</h3>
+            <p>Browse privately on any network worldwide.</p>
+        </div>
+    </div>
+</section>
+
+<section class="feature">
+    <img src="secure1.jpg" alt="Secure Access">
+    <div>
+        <h2>Secure access worldwide</h2>
+        <p>
+            Stay protected anywhere with strong encryption
+            and real-time threat monitoring.
+        </p>
+        <button>Learn More</button>
+    </div>
+</section>
+
+<section class="feature reverse">
+    <div>
+        <h2>Protection on every device</h2>
+        <p>
+            Works seamlessly across mobile, desktop,
+            tablet, and laptop devices.
+        </p>
+    </div>
+    <img src="devices.jpg" alt="Multiple Devices">
+</section>
+
+<section class="advantages">
+    <div class="card">
+        <img src="lock.jpg" width="90">
+        <h3>Strong Data Protection</h3>
+        <p>End-to-end encryption keeps your data private.</p>
+    </div>
+
+    <div class="card">
+        <img src="speed.jpg" width="90">
+        <h3>Fast & Reliable</h3>
+        <p>Security without slowing down your internet.</p>
+    </div>
+
+    <div class="card">
+        <img src="globe1.jpg" width="90">
+        <h3>Global Coverage</h3>
+        <p>Protection across 90+ countries worldwide.</p>
+    </div>
+</section>
+
+<section class="map">
+    <h2>Trusted Security Network Worldwide</h2>
+    <img src="world.jpg" alt="World Map">
+    <p>160+ locations • 90+ countries • 24/7 protection</p>
+</section>
+
+<footer>
+    © 2026 SecureNet Cyber Security Platform
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+
+.header a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 60px;
+    background-color: #f3f1dc;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    font-size: 16px;
+}
+
+.hero-text button {
+    margin-top: 20px;
+    padding: 12px 28px;
+    background-color: #1f8f6a;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.hero-img {
+    width: 45%;
+}
+
+/* FEATURES */
+.feature {
+    display: flex;
+    align-items: center;
+    padding: 60px;
+}
+
+.feature img {
+    width: 40%;
+    margin-right: 40px;
+}
+
+.feature.reverse {
+    background-color: #f9f9f9;
+}
+
+/* ADVANTAGES */
+.advantages {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px;
+}
+
+.card {
+    width: 30%;
+    text-align: center;
+}
+
+.card img {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+/* MAP */
+.map {
+    text-align: center;
+    padding: 60px;
+    background-color: #fdecec;
+}
+
+.map img {
+    width: 70%;
+    margin: 20px 0;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
